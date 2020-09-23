@@ -59,3 +59,9 @@ function getRandomWord(){
     word.innerHTML = randomWord
 }
 
+//Add word to DOM
+function addWordToDOM(){
+    randomWord = getRandomWord();
+    word.innerHTML = randomWord;
+}
+
