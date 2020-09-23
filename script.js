@@ -70,3 +70,29 @@ function updateScore(){
     score ++;
     scoreEl.innerHTML = score;
 }
+
+//Update time
+function updateTime(){
+    time--;
+    timeEl.innerHTML = time + 's';
+
+    if (time === 0){
+        clearInterval(timeInterval);
+        //end game
+        gameOver()
+    }
+}
+
+//Game over, show end screen
+function gameOver() {
+    endgameEl.innerHTML = `
+      <h1>Time ran out</h1>
+      <p>Your final score is ${score}</p>
+      <button onclick="location.reload()">Reload</button>
+    `;
+  
+    endgameEl.style.display = 'flex';
+  }
+  
+  addWordToDOM();
+  
