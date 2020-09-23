@@ -30,12 +30,12 @@ const words = [
     'admit',
     'drag',
     'loving',
-    'sophomoric',
-    'purile',
-    'futile',
-    'obsequious',
-    'yardarm',
-    'acquaintanceship'
+    // 'sophomoric',
+    // 'purile',
+    // 'futile',
+    // 'obsequious',
+    // 'yardarm',
+    // 'acquaintanceship'
   ];
 
 //Initialize word
@@ -51,7 +51,7 @@ let time = 10;
 let difficulty =
     localStorage.getItem('difficulty') !== null
     ? localStorage.getItem(difficulty)
-    : medium;
+    : 'medium';
 
 //Focus on text at the start
 text.focus();
