@@ -90,10 +90,11 @@ input{
 }
 
 .score-container{
-    position: absolute;
+    position: static;
     top: 60px;
     left: 20px;
     bottom: 20px;
+    text-align: right;
 }
 
 .time-container{
@@ -101,6 +102,7 @@ input{
     top: 60px;
     left: 20px;
     bottom: 20px;
+    text-align: right;
 }
 
 .end-game-container{
