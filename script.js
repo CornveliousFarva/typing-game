@@ -29,7 +29,13 @@ const words = [
     'feeble',
     'admit',
     'drag',
-    'loving'
+    'loving',
+    'sophomoric',
+    'purile',
+    'futile',
+    'obsequious',
+    'yardarm',
+    'acquaintanceship'
   ];
 
 //Initialize word
