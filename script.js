@@ -9,35 +9,34 @@ const settingsForm = document.getElementById('settings-form');
 const difficultySelect = document.getElementById('difficulty');
 
 // List of words for game
-const words = [
-    'sigh',
-    'tense',
-    'airplane',
-    'ball',
-    'pies',
-    'juice',
-    'warlike',
-    'bad',
-    'north',
-    'dependent',
-    'steer',
-    'silver',
-    'highfalutin',
-    'superficial',
-    'quince',
-    'eight',
-    'feeble',
-    'admit',
-    'drag',
-    'loving',
-    // 'sophomoric',
-    // 'purile',
-    // 'futile',
-    // 'obsequious',
-    // 'yardarm',
-    // 'acquaintanceship'
-  ];
-
+const words = ['sigh',
+'tense',
+'airplane',
+'ball',
+'pies',
+'juice',
+'warlike',
+'bad',
+'north',
+'dependent',
+'steer',
+'silver',
+'highfalutin',
+'superficial',
+'quince',
+'eight',
+'feeble',
+'admit',
+'drag',
+'loving',
+'sophomoric',
+'purile',
+'futile',
+'obsequious',
+'yardarm',
+'acquaintanceship'
+];
+    
 //Initialize word
 let randomWord;
 
@@ -53,6 +52,12 @@ let difficulty =
     ? localStorage.getItem(difficulty)
     : 'medium';
 
+// Set difficulty select value
+difficultySelect.value =
+  localStorage.getItem('difficulty') !== null
+    ? localStorage.getItem('difficulty')
+    : 'medium';
+
 //Focus on text at the start
 text.focus();
 
@@ -61,8 +66,7 @@ const timeInterval = setInterval(updateTime, 1000)
 
 //Generate random word from array
 function getRandomWord(){
-    randomWord = getRandomWord();
-    word.innerHTML = randomWord
+    return words[Math.floor(Math.random() * words.length)]
 }
 
 //Add word to DOM
